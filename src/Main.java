@@ -9,19 +9,19 @@ public class Main {
     }
 
     public static int interval(int num) {
-        int total = 1;
-        for (int i = 1; i < num; i++) {
-            if (soma(i)) {
+        int total = 0;
+        for (int i = 1; i <= num; i++) {
+            if (soma(i, num)) {
                 total++;
             }
         }
         return total;
     }
 
-    public static boolean soma(int n) {
+    public static boolean soma(int n, int max) {
         int soma = 0;
-        for (int i = n; i <= 15; i++) {
-            if (i + soma == 15) {
+        for (int i = n; i <= max; i++) {
+            if (i + soma == max) {
                 return true;
             } else {
                 soma += i;
